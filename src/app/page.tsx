@@ -78,8 +78,9 @@ export default function Page() {
     try {
       setSignMessageLoading(true);
       const client = createWalletClient();
+      const [address] = await client.getAddresses();
       const response = await client.signMessage({
-        account: "0x00",
+        account: address,
         message,
       });
 
