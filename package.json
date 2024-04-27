@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@0xpass/passport": "1.0.0",
-    "@0xpass/passport-viem": "1.0.0",
-    "@0xpass/webauthn-signer": "1.0.0",
+    "@0xpass/passport": "2.0.1",
+    "@0xpass/passport-viem": "2.0.0",
+    "@0xpass/webauthn-signer": "2.0.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
