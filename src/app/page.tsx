@@ -4,7 +4,6 @@ import { createPassportClient } from "@0xpass/passport-viem";
 import { http } from "viem";
 import { mainnet } from "viem/chains";
 import { usePassport } from "./hooks/usePassport";
-import { TESTNET_RSA_PUBLIC_KEY } from "@0xpass/passport";
 
 export default function Page() {
   const [username, setUsername] = useState("");
@@ -26,10 +25,7 @@ export default function Page() {
     userDisplayName: username,
   };
 
-  const { passport } = usePassport({
-    ENCLAVE_PUBLIC_KEY: TESTNET_RSA_PUBLIC_KEY,
-    scope_id: "07907e39-63c6-4b0b-bca8-377d26445172",
-  });
+  const { passport } = usePassport("07907e39-63c6-4b0b-bca8-377d26445172");
 
   async function register() {
     setRegistering(true);
@@ -70,14 +66,18 @@ export default function Page() {
     }
   }
 
-  function createWalletClient() {
-    return createPassportClient(authenticatedHeader, fallbackProvider, mainnet);
+  async function createWalletClient() {
+    return await createPassportClient(
+      authenticatedHeader,
+      fallbackProvider,
+      mainnet
+    );
   }
 
   async function signMessage(message: string) {
     try {
       setSignMessageLoading(true);
-      const client = createWalletClient();
+      const client = await createWalletClient();
       const [address] = await client.getAddresses();
       const response = await client.signMessage({
         account: address,
