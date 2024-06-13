@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@0xpass/passport':
-        specifier: 2.1.1
-        version: 2.1.1
+        specifier: 2.1.5
+        version: 2.1.5
       '@0xpass/passport-viem':
         specifier: 2.0.1
         version: 2.0.1(typescript@5.3.3)
@@ -60,8 +60,8 @@ packages:
   '@0xpass/passport-viem@2.0.1':
     resolution: {integrity: sha512-zYtV90otySU9vuW6HMx1I75w45eym6WTcB/MuSEXqNUPwUQtiJz9u437TkAAOvgJ9bIGWZU0G+7WGadVnhHGLQ==}
 
-  '@0xpass/passport@2.1.1':
-    resolution: {integrity: sha512-aDnOIRu6CA6HRZu8yIbgGy1qtFBnKdsmQsIwhR3fZ5F8X//Dm4MZprFVz83Ib92vUfLLyXEo2I9u7dfIE3CQcQ==}
+  '@0xpass/passport@2.1.5':
+    resolution: {integrity: sha512-jA0QphlYugJLMcRDL+4dZ2DZHrLYc9PWkEKqqXL384yiK++ww2TmPKsSYSCb1GJeI2n9oIviKXTiLC935qUR0w==}
 
   '@0xpass/webauthn-signer@2.0.0':
     resolution: {integrity: sha512-4yZvURGxlMBnbfEGPg7jjIFIxwpS6mNaBtDaVtH2YdYVKM6glkprCFdn8kdDEADo3dIJfzG0sL51cARzzrI50w==}
@@ -830,7 +830,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@0xpass/passport@2.1.1':
+  '@0xpass/passport@2.1.5':
     dependencies:
       '@0xpass/models': 2.0.0
       axios: 1.6.8
